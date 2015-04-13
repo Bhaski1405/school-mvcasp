@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AcademyApp.Models;
+using AcademyApp.EF;
 
 namespace AcademyApp.Controllers
 {
@@ -13,18 +14,16 @@ namespace AcademyApp.Controllers
         // GET: /Employees/
 
         public ActionResult Index()
-        {
-            EmployeeIndex vm = new EmployeeIndex() {
-                Names = new List<string>(){
-                    "Niranjan",
-                    "Pragya",
-                    "Arun",
-                    "Paul",
-                    "Maharaja",
-                    "Avinash"
-                }
-            };
-            return View("Index", vm);
+        {   
+            using(collabcontext db = new collabcontext())
+	        {
+		        var employees = db.Employees.Select(x=>x);
+                EmployeeModel vm = new EmployeeModel(){
+                    Result = employees.ToList<Employee>()
+                };
+                return View("Index", vm);
+	        }
+            
         }
 
     }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using AcademyApp.EF;
 namespace AcademyApp.Models
 {
-    public class EmployeeIndex
+    public class EmployeeModel
     {
-        public List<string> Names { get; set; }
+        public List<Employee> Result{ get; set; }
     }
 }
