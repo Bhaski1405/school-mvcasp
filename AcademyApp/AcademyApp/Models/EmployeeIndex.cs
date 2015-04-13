@@ -8,5 +8,6 @@ namespace AcademyApp.Models
     public class EmployeeModel
     {
         public List<Employee> Result{ get; set; }
+        public string SearchPhrase { get; set; }
     }
 }

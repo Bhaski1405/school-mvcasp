@@ -27,10 +27,10 @@ namespace AcademyApp.Controllers
 	        }
             
         }
-        public ActionResult Search(int id) {
+        public ActionResult Search(int SearchPhrase) {
 
             using (collabcontext db = new collabcontext()) {
-                var result = db.Employees.Where(x => x.Id == id).Select(x => x);
+                var result = db.Employees.Where(x => x.Id == SearchPhrase).Select(x => x);
                 EmployeeModel vm = new EmployeeModel() {Result=result.ToList<Employee>() };
                 return View("Index", vm);
 

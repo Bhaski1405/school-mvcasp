@@ -6,12 +6,12 @@
 <div class="col-md-4">
     <div class="form-group">
         <div class="input-group">
-            <form action="Search" method="GET">
-                <input name="id" type="text" class="form-control" placeholder="Enter some id">
+            @using (@Html.BeginForm("Search","Employees",FormMethod.Get, new {})) {
+                @Html.TextBoxFor(x=>x.SearchPhrase)
                 <span class="input-group-btn">
                     <input type="submit" value="Go"/>
                 </span>
-            </form>
+            }
         </div>
     </div>
 </div>
