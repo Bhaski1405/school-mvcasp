@@ -2,34 +2,39 @@
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+@* this is the for the search box *@
 <div class="col-md-4">
     <div class="form-group">
         <div class="input-group">
-            <span class="input-group-addon">$</span>
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Button</button>
-            </span>
+            <form action="Search" method="GET">
+                <input name="id" type="text" class="form-control" placeholder="Enter some id">
+                <span class="input-group-btn">
+                    <input type="submit" value="Go"/>
+                </span>
+            </form>
         </div>
     </div>
 </div>
-<div class="col-md-4">
-    <table class="table table-striped table-hover ">
-        <tr>
-            <th>Id</th>
-            <th>Email</th>
-            <th>Alias</th>
-        </tr>
-
-        @for (int i = 0; i < Model.Result.Count; i++) {
+@* this is for the result table *@
+<div class="col-md-12">
+    <div class="col-md-4">
+        <table class="table table-striped table-hover ">
             <tr>
-                <td>@Model.Result[i].Id</td>
-                <td>@Model.Result[i].Email</td>
-                <td>@Model.Result[i].Alias</td>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Alias</th>
             </tr>
-        }
 
-    </table>
+            @for (int i = 0; i < Model.Result.Count; i++) {
+                <tr>
+                    <td>@Model.Result[i].Id</td>
+                    <td>@Model.Result[i].Email</td>
+                    <td>@Model.Result[i].Alias</td>
+                </tr>
+            }
 
+        </table>
+
+    </div>
 </div>
 

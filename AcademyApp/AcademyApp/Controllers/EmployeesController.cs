@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using AcademyApp.Models;
 using AcademyApp.EF;
+using System.Web.Http;
+using System.Web.Mvc;
 
 namespace AcademyApp.Controllers
 {
@@ -12,7 +14,7 @@ namespace AcademyApp.Controllers
     {
         //
         // GET: /Employees/
-
+        [System.Web.Mvc.HttpGet]
         public ActionResult Index()
         {   
             using(collabcontext db = new collabcontext())
@@ -25,6 +27,14 @@ namespace AcademyApp.Controllers
 	        }
             
         }
+        public ActionResult Search(int id) {
 
+            using (collabcontext db = new collabcontext()) {
+                var result = db.Employees.Where(x => x.Id == id).Select(x => x);
+                EmployeeModel vm = new EmployeeModel() {Result=result.ToList<Employee>() };
+                return View("Index", vm);
+
+            }
+        }
     }
 }
