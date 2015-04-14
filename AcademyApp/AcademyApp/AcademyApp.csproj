@@ -333,6 +333,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employees\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201504131017041_addtable_employees.resx">

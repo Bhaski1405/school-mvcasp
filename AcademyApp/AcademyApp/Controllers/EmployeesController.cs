@@ -27,6 +27,7 @@ namespace AcademyApp.Controllers
 	        }
             
         }
+        [System.Web.Mvc.HttpGet]
         public ActionResult Search(int SearchPhrase) {
 
             using (collabcontext db = new collabcontext()) {
@@ -34,6 +35,39 @@ namespace AcademyApp.Controllers
                 EmployeeModel vm = new EmployeeModel() {Result=result.ToList<Employee>() };
                 return View("Index", vm);
 
+            }
+        }
+        [System.Web.Mvc.HttpGet]
+        public ActionResult Add() {
+            return View("Add");
+        }
+        [System.Web.Mvc.HttpPost]
+        public ActionResult Add(Employee toAdd) {
+            using (collabcontext db = new collabcontext()) {
+                //getting a new employee model -dummy
+                EmployeeModel vm = new EmployeeModel() {
+                    Result = new List<Employee>()
+                };
+                if (toAdd !=null) {
+                    bool isAlready = db.Employees
+                        .Where(x => x.Id == toAdd.Id)
+                        .Count() != 0;
+                    if (!isAlready) {
+                        if (!String.IsNullOrEmpty(toAdd.Email) && !String.IsNullOrEmpty(toAdd.Alias)) {
+                            db.Employees.Add(toAdd);
+                            try {
+                                db.SaveChanges();
+                                vm.Result = db.Employees.ToList<Employee>();
+                                return View("Index", vm);
+                            }
+                            catch (Exception x) {
+                                return View();
+                            }
+                        } 
+                    }
+                    return View("Index",vm);
+                }
+                return View("Index",vm);
             }
         }
     }
