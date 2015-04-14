@@ -12,7 +12,7 @@ namespace AcademyApp.Controllers
 {
     public class EmployeesController : Controller
     {
-        //
+       
         // GET: /Employees/
         [System.Web.Mvc.HttpGet]
         public ActionResult Index()
