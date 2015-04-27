@@ -39,7 +39,15 @@ Introduction to the MVC ASP technology
 		also with SEO support following the REST protocol
 		> Support for ASP markup , not only HTML
 		> solid support for authentication and authorization that comes with the ASP framework.
-	
+	> Introduction to Visual Studio 
+		>Technology the tutor is using
+			>VS2013 utl, update 4
+			>Windows 8
+			>.NET framework 4.5
+			>MVC4 ASP application
+			>SQL server 2008 ( im not sure if this is going to work .. but hope it does)
+			>EF 5.0.0 + - this for the repository level
+
 	> Understanding how the request is executed in the ASP environment, what happens behind the scenes
 		>receive the request : From the global asax, the route objects are created > route Table
 		>URLrouting > first route in the route table that matches > Route data >request context
@@ -59,3 +67,12 @@ Introduction to the MVC ASP technology
 		? how does a url look in practice, show url effects 
 		? show how the control reaches the controller from the url 
 		? show how parameters are send via the url
+	
+	Problem-01 definition
+	> We are to make some academy app where you can have trainings and the list of trainings to be displayed. 
+	> frmo the database we are to display the tranining and the training details in the table on the webpage
+	> user should be able to search for the trainings as well, and such a search is by the training title only
+
+	>open space for questions and answers. 
+	
+
