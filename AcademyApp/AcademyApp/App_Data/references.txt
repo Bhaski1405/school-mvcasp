@@ -47,6 +47,8 @@ Introduction to the MVC ASP technology
 			>MVC4 ASP application
 			>SQL server 2008 ( im not sure if this is going to work .. but hope it does)
 			>EF 5.0.0 + - this for the repository level
+	> Starting with the project application from scracth
+		>Web >VS2012 >MVC4 Web application >Internet based application
 
 	> Understanding how the request is executed in the ASP environment, what happens behind the scenes
 		>receive the request : From the global asax, the route objects are created > route Table
@@ -67,7 +69,12 @@ Introduction to the MVC ASP technology
 		? how does a url look in practice, show url effects 
 		? show how the control reaches the controller from the url 
 		? show how parameters are send via the url
-	
+	>Simple demo
+		>Have to pass a custom message to the view and the user should be able to see it
+	> Hello user demo
+		>User enters his name
+		>Gets a html page that greets the user
+
 	Problem-01 definition
 	> We are to make some academy app where you can have trainings and the list of trainings to be displayed. 
 	> frmo the database we are to display the tranining and the training details in the table on the webpage
