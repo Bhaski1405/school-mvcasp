@@ -10,11 +10,7 @@ namespace AcademyApp.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index() {
-            //ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-            IndexModel vm = new IndexModel()
-            {CustomMessage="This is hello from localhost3436"};
-
-            return View("Index",vm);
+            return View("Index");
         }
 
         public ActionResult About() {
