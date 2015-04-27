@@ -2,3 +2,60 @@
 http://getbootstrap.com/
 http://bootswatch.com/
 http://www.colorhexa.com/
+
+Tutors notes :
+Introduction to tutor 
+Introduction to jumpstart sessions
+	>demo intensive
+	>less of theory
+	>this is not for the advanced users, or for people who have already done MVC
+	>this is for people who have not done any web programming but need to start somewhere
+	>C# background is required
+	>LINQ understanding is an added advantage
+	>understanding of databases and simple SQL is requried
+	>no prerequiresites for HTML5 or JS, some working knowledge woudl be covered here in the session
+	>HTML5 and JS are vast topics and deserve their own sessions, here we are just aiming to get the working knowledge
+	>sessions woudl happen over the virtual classroom, though live classrooms are effective
+	>all the code is shared .. https://github.com/kneerunjun/school-mvcasp/tree/04-27-2015-ASP-Sessions/AcademyApp/AcademyApp
+		>make sure you are in the correct repository and the branch as well. 
+		>we assume that you have knowledge of Github and collaborative development
+		>Github introduction.. 
+	>recommended course if to be taken online independently : http://www.microsoftvirtualacademy.com/training-courses/developing-asp-net-mvc-4-web-applications-jump-start
+	>about MVA - and how you can register for courses there.. 
+		>MVA is for fast learners and makes no sense to start from there.
+
+Introduction to the MVC ASP technology
+	> where do you stand in terms of the technology you are to use now.. 
+		> if you were not using MVC what could you be using ?
+			> web forms
+			> WPF / silverlight
+			> traditional ASP.net
+			> ...
+		>MVA presentation
+	> Why is MVC becoming more popular? http://www.asp.net/mvc/overview/older-versions-1/overview/asp-net-mvc-overview
+		> TDD and separation of concerns.
+		> extensible pluggable framework
+		> Lets you build URLs that are directly mapping to the components inside the server and that means comprehensive set of URLs can be built 
+		also with SEO support following the REST protocol
+		> Support for ASP markup , not only HTML
+		> solid support for authentication and authorization that comes with the ASP framework.
+	
+	> Understanding how the request is executed in the ASP environment, what happens behind the scenes
+		>receive the request : From the global asax, the route objects are created > route Table
+		>URLrouting > first route in the route table that matches > Route data >request context
+		>Create the MVC request : Request context > MVCRouteHandler 
+		>Call the controller : MVCRouteHandler >Controller >Action
+		>Execute action : action is executed and the result is returned
+
+		>>Types of results : 
+			1.ViewResult
+			2.JsonResult
+			3.HttpResult
+			4.EmptyResult
+			5.RedirectToRouteResult
+			6.RedirectResult
+	> Show demo on 
+		? Show a real life controller - just a class, nothing else
+		? how does a url look in practice, show url effects 
+		? show how the control reaches the controller from the url 
+		? show how parameters are send via the url
