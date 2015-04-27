@@ -10,7 +10,8 @@ namespace AcademyApp.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index() {
-            return View("Index");
+            IndexModel vm = new IndexModel() { CustomMessage="This is the index method, custom message"};
+            return View("Index", vm);
         }
 
         public ActionResult About() {
@@ -23,6 +24,10 @@ namespace AcademyApp.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult Demo(int id =0)
+        {
+            return View("Index");
         }
     }
 }
