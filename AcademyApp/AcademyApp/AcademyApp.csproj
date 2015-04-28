@@ -187,6 +187,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EchoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TrainingsController.cs" />
     <Compile Include="EF\collabcontext.cs" />
     <Compile Include="EF\Employee.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -196,6 +197,8 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\GreetModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\Training.cs" />
+    <Compile Include="Models\TrainingIndex.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -318,9 +321,13 @@
     <Content Include="Views\Shared\_Master.cshtml" />
     <Content Include="Views\Echo\Hello.cshtml" />
     <Content Include="Views\Echo\Greet.cshtml" />
+    <Content Include="Views\Trainings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
