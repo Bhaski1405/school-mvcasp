@@ -185,6 +185,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EchoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="EF\collabcontext.cs" />
     <Compile Include="EF\Employee.cs" />
@@ -193,7 +194,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\GreetModel.cs" />
     <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +316,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Master.cshtml" />
+    <Content Include="Views\Echo\Hello.cshtml" />
+    <Content Include="Views\Echo\Greet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

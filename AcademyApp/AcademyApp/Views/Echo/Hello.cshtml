@@ -1,0 +1,30 @@
+﻿@model AcademyApp.Models.UserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("GreetUser","Echo"))
+        {
+            @Html.TextBoxFor(y => y.Name);
+            @Html.TextBoxFor(x => x.Location);
+            @Html.TextBoxFor(x => x.Project);
+            <input type="submit" name="name" value="go" />
+        }
+        @*<form action="/echo/GreetUser">
+            <input name="Name" type="text" placeholder="enter name">
+            <input name="Location" type="text" placeholder="enter location">
+            <input name="Project" type="text" placeholder="enter project">
+            
+        </form>*@
+    </div>
+</body>
+</html>
