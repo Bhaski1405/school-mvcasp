@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace AcademyApp.EF
+namespace AcademyApp.Entities
 {
-    public class collabcontext :DbContext
+    public class academycontext:DbContext
     {
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Training> Trainings { get; set; }
     }
 }
