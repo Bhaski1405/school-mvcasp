@@ -194,9 +194,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504290955079_addtable_trainings.cs" />
-    <Compile Include="Migrations\201504290955079_addtable_trainings.Designer.cs">
-      <DependentUpon>201504290955079_addtable_trainings.cs</DependentUpon>
+    <Compile Include="Migrations\201504300650553_addtable_tranings.cs" />
+    <Compile Include="Migrations\201504300650553_addtable_tranings.Designer.cs">
+      <DependentUpon>201504300650553_addtable_tranings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505040935534_synctables_test.cs" />
+    <Compile Include="Migrations\201505040935534_synctables_test.Designer.cs">
+      <DependentUpon>201505040935534_synctables_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -340,6 +344,7 @@
     <Content Include="Views\Echo\Hello.cshtml" />
     <Content Include="Views\Echo\Greet.cshtml" />
     <Content Include="Views\Trainings\Index.cshtml" />
+    <Content Include="Views\Trainings\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -348,8 +353,11 @@
     <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504290955079_addtable_trainings.resx">
-      <DependentUpon>201504290955079_addtable_trainings.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504300650553_addtable_tranings.resx">
+      <DependentUpon>201504300650553_addtable_tranings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505040935534_synctables_test.resx">
+      <DependentUpon>201505040935534_synctables_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

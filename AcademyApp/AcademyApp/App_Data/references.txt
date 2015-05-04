@@ -83,3 +83,44 @@ Introduction to the MVC ASP technology
 	>open space for questions and answers. 
 	
 
+	>> Day 04  : 
+	Validation : 
+		Why do you need validation ? 
+		Before dispatching the model to the controller, a model that has been made at the fron end it 
+		is necessary to have that checkpost to chek the vitals. Problem is since the server is the one who can vlaidate
+		it means you would have to send the model to the server everytime the user is filling up th pieces of the detail
+		Making such round trips is not advisable and also detriemental to the speed of the webapp
+		you could have the entire validation logic being sent from the server just once with the form, but the user might be using 
+		a browser with restricted scripts and thus your validation logic could fail entirely.So depending on the scripts entirely is simply not advisable 
+
+		Validation then is divided into 2 pieces :1
+		1. Server side validation using data annotation
+		2. Client side validation using Ajax
+
+
+		Here is the list of Data Annotation that you could use
+		1. Compare
+		2. Remote
+		3. Required 
+		4. Range
+		5. Regular expression
+		6. StringLength`
+
+		>> demo with one example and multiple annotations .. 
+		here is how you need to check
+			<add key="ClientValidationEnabled" value="true" />
+			<add key="UnobtrusiveJavaScriptEnabled" value="true" />
+		make sure you have this in the app settings and enabled  ==true.
+
+
+		Client side validation using Ajax : 
+		With the advent of modern browsers supporting rich client side behaviour and thus client side validation is quite popular
+		There are many client side validation frameworks already in place and one should make use of them . 
+		as such making your own validation work is counter-productive and less effective. Someone else if has done it already, 
+		you can just make use of the same in your project
+
+		for Client side validations to happen
+		1. MVC supports the JQuery validate framework
+		2. MVC also supports unobtrusive java script
+
+		Scripts are attached to the input elements and keep listening to the input in the elements. 

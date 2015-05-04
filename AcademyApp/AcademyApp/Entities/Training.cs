@@ -16,6 +16,7 @@ namespace AcademyApp.Entities
         public int Id { get; set; }
         [MinLength(5)]
         [MaxLength(255)]
+        
         public string Title { get; set; }
         [MinLength(5)]
         [MaxLength(255)]

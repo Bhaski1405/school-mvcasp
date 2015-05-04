@@ -7,13 +7,13 @@ namespace AcademyApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addtable_trainings : IMigrationMetadata
+    public sealed partial class synctables_test : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addtable_trainings));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(synctables_test));
         
         string IMigrationMetadata.Id
         {
-            get { return "201504290955079_addtable_trainings"; }
+            get { return "201505040935534_synctables_test"; }
         }
         
         string IMigrationMetadata.Source

@@ -9,5 +9,6 @@ namespace AcademyApp.Models
     public class TrainingIndex
     {
         public List<Training> Trainings { get; set; }
+        public string SearchPhrase { get; set; }
     }
 }
