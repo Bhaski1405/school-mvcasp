@@ -10,8 +10,8 @@ namespace AcademyApp.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index() {
-            IndexModel vm = new IndexModel() { CustomMessage="This is the index method, custom message"};
-            return View("Index", vm);
+            
+            return View("Index");
         }
 
         public ActionResult About() {

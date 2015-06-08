@@ -45,7 +45,7 @@ Introduction to the MVC ASP technology
 			>Windows 8
 			>.NET framework 4.5
 			>MVC4 ASP application
-			>SQL server 2008 ( im not sure if this is going to work .. but hope it does)
+			>SQL server 2014 ( im not sure if this is going to work .. but hope it does)
 			>EF 5.0.0 + - this for the repository level
 	> Starting with the project application from scracth
 		>Web >VS2012 >MVC4 Web application >Internet based application
